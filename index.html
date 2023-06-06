@@ -4,30 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <main>
-        <h1>Keeping An Eye on Delivery</h1>
-        <form>
-            <label for="email">Email: </label>
-            <input type="email" id="email" autofocus>
-            
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha">
-            
-            <input type="submit" value="Log In" id="login">
-        </form>
-        <a href="#">ESQUECI MINHA SENHA</a>
-        <span id="alerta"></span>
-        <p>Não tem conta? <strong><a href="#">Inscreva-se</a></strong></p>
-
-        <a href="https://github.com/LukasNatanael" target="_blank">
-            <i class="fa-brands fa-github"></i> LukasNatanael
-        </a>
+        <section id="login-page">
+            <h1>Keeping An Eye on Delivery</h1>
+            <!-- <span>
+                <a href="#section2">Registrar</a>
+                <a href="#home-page">Logar</a>
+            </span> -->
+            <form>
+                <label for="email">Email: </label>
+                <input type="email" id="email" autofocus>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha">
+                
+                <input type="submit" value="Log In" id="login">
+            </form>
+            <a href="#">ESQUECI MINHA SENHA</a>
+            <span id="alerta"></span>
+            <p>Não tem conta? <strong><a href="#">Inscreva-se</a></strong></p>
+    
+            <a href="https://github.com/LukasNatanael" target="_blank">
+                <i class="fa-brands fa-github"></i> LukasNatanael
+            </a>
+        </section>
+        <section id="section2">
+            <h1>Registrar</h1>
+            <a href="#login-page">Logar</a>
+            <form>
+                <label for="email">
+                    Email:
+                    <input type="email" id="email">
+                </label>
+                <label for="senha">
+                    Senha:
+                    <input type="password" id="senha">
+                </label>
+            </form>
+        </section>
+        <section id="home-page">
+            <h1>Home</h1>
+            <a href="#login-page">Sair</a>
+            <a href="#section2">Registrar</a>
+            <form>
+                <label for="email">
+                    Email:
+                    <input type="email" id="email">
+                </label>
+                <label for="senha">
+                    Senha:
+                    <input type="password" id="senha">
+                </label>
+            </form>
+        </section>
     </main>
 </body>
 <script src="src/script.js"></script>

@@ -6,6 +6,11 @@ let login = document.querySelector('#login')
 let e;
 let s;
 
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
 const showFlash = (cor) => {
     alerta.style.color = cor
 }
@@ -37,11 +42,10 @@ login.addEventListener('click', (event) => {
     else {
         email.value = ''
         senha.value = ''
+        console.log('LOGADO')
+        window.location.href = '#home-page'
+
     }
 
 })
 
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-}
