@@ -15,6 +15,11 @@ body {
     background-image: linear-gradient(to bottom, green, aqua);
 }
 
+i {
+    font-family: fontAwesome;
+    font-style: normal;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -38,6 +43,7 @@ form {
 }
 
 form > label {
+    /* color: white; */
     font-size: 1.2em;
 }
 
@@ -65,14 +71,20 @@ form > input[type=submit] {
 }
 form > input[type=submit]:hover {
     background-color: rgb(4, 4, 201);
+    border: 1px solid rgb(4, 4, 201);
 }
 
 a {
     color: white;
     text-decoration: none;
+    transition: color .5s;
 }
 a:hover, a:active {
     /* font-weight: bold; */
     text-decoration: underline;
+    color: blue;
+}
 
+#alerta {
+    color: transparent;
 }
