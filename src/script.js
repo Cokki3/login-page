@@ -12,6 +12,9 @@ let register = document.querySelector('#register')
 let alerta2 = document.querySelector('#alerta2')
 
 
+// menu
+let menu = document.querySelector('#menu')
+
 let e;
 let s;
 
@@ -55,10 +58,12 @@ login.addEventListener('click', (event) => {
         setTimeout(hideFlash, 1000);
     }
     else {
+        window.location.href = '#home-page'
         email.value = ''
         senha.value = ''
-        console.log('LOGADO')
-        window.location.href = '#home-page'
+        // console.log('LOGADO')
+        menu.style.display = 'none'
+        // window.moveTo('#home')
 
     }
 
@@ -114,5 +119,15 @@ register.addEventListener('click', (event) => {
             window.location.href = '#login-page' }, 1000
         )
         
+    }
+})
+
+
+document.querySelector('#bars').addEventListener('click',() => {
+    if (menu.style.display == 'none') {
+        menu.style.display = 'flex'
+    }
+    else {
+        menu.style.display = 'none'
     }
 })

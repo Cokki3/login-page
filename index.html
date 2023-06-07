@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
 
 </head>
 <body>
@@ -19,10 +19,10 @@
             </span> -->
             <form>
                 <label for="email">Email: </label>
-                <input type="email" id="email" autofocus>
+                <input type="email" id="email" autofocus value="lucas@gmail.com">
                 
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha">
+                <input type="password" id="senha" value="lucas@gmail.com">
                 
                 <input type="submit" value="Log In" id="login">
             </form>
@@ -42,7 +42,7 @@
             <!-- <a href="#login-page">Logar</a> -->
             <form>
                 <label for="register-name">Nome:</label>
-                <input type="text" id="register-name" autofocus>
+                <input type="text" id="register-name">
 
                 <label for="register-lastname">Sobrenome:</label>
                 <input type="text" id="register-lastname">
@@ -60,18 +60,19 @@
             </a>
         </section>
         <section id="home-page">
-            <h1>Home</h1>
-            <a href="#login-page">Sair</a>
-            <form>
-                <label for="email">
-                    Email:
-                    <input type="email" id="email">
-                </label>
-                <label for="senha">
-                    Senha:
-                    <input type="password" id="senha">
-                </label>
-            </form>
+            <i class="fa-solid fa-bars" id="bars" ></i>
+            <aside id="menu" style="display: none;">
+                <a href="#">Perfil</a>
+                <a href="#">Configurações</a>
+                <a href="#login-page">Sair</a>
+            </aside>
+            <aside id="screen">
+                <i class="fa-thin fa-user" id="user"></i>
+                <h2>Que bom te ver novamente <span>Lucas</span>!</h2>
+
+            </aside>
+            <!-- <a href="#login-page">Sair</a> -->
+
         </section>
     </main>
 </body>
