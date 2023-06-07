@@ -32,6 +32,7 @@ section {
     height: 100%;
     gap: .8em;
     padding: .5em;
+    overflow: hidden;
 }
 
 form {
@@ -106,10 +107,20 @@ h1 {
     justify-content: center;
 }
 
+#register-page > h1 {
+    display: flex;
+    gap: 1em;
+}
+#register-page > h1 > a {
+    position: relative;
+    left: 0em;
+    top: 0em;
+}
+
 #back {
-    font-size: 2em;
     position: relative;
     left: -4em;
+    top: 1em;
 }
 
 #home-page {
