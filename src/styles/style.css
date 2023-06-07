@@ -131,7 +131,7 @@ h1 {
 #menu {
     width: 50%;
     z-index: 1;
-    padding: 4em .5em;
+    padding: 4em 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
