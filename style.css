@@ -105,3 +105,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+#back {
+    font-size: 2em;
+    position: relative;
+    left: -4em;
+}
