@@ -150,15 +150,18 @@ h1 {
     position: relative;
     /* left: -1em; */
     left: -1.8em;
-
     /* transition: all .3s; */
-    box-shadow: 28px 0px 42px 225px rgba(0, 0, 0, 0.37);
+    background-color: #0000005e;
     height: 150%;
     top: -1em;
 
-
+    
     /* display: none; */
 
+}
+#menu > a > i {
+    width: 100%;
+    padding-right: 3px;
 }
 
 #user {
@@ -167,6 +170,7 @@ h1 {
 }
 #screen {
     width: 100%;
+    height: 80%;
     z-index: 0;
     padding: 0 2em;
     display: flex;
@@ -174,7 +178,8 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    position: relative;
+    position: absolute;
+    z-index: -1;
     left: -0.6em;
 }
 

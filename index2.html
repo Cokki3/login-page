@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* main {
+            display: flex;
+        } */
+        #menu {
+            display: none;
+            background-color: rgba(127, 255, 212, 0.466);
+            width: fit-content;
+            padding: 1em;
+            position: absolute;
+            z-index: 10;
+            /* float: left; */
+            
+        }
+        .main {
+            position: relative;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button>menu</button>
+        <aside id="menu">
+            <header>
+                <h1>MENU</h1>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                </ul>
+            </header>
+        </aside>
+        <section id="main">
+            <h1>Título</h1>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, architecto laudantium eos at harum, molestias totam nihil reprehenderit cumque est corporis necessitatibus sunt ratione aut id atque. Delectus, porro excepturi.</p>
+            </article>
+        </section>
+    </main>
+</body>
+    <script>
+        let m = document.querySelector('#menu')
+        document.querySelector('button').addEventListener('click', () => {
+            if (m.style.display == 'none') {
+                m.style.display = 'block';
+            }
+            else {
+                m.style.display = 'none';
+            }
+        })
+    </script>
+</html>
