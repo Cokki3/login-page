@@ -11,6 +11,11 @@ let registerPass = document.querySelector('#register-pass')
 let register = document.querySelector('#register')
 let alerta2 = document.querySelector('#alerta2')
 
+// Paginas
+let loginPage = document.querySelector('#login-page')
+let registerPage = document.querySelector('#register-page')
+let homePage = document.querySelector('#home-page')
+
 
 // menu
 let menu = document.querySelector('#menu')
@@ -58,6 +63,7 @@ login.addEventListener('click', (event) => {
         setTimeout(hideFlash, 1000);
     }
     else {
+        // loginPage.style.display = 'none'
         window.location.href = '#home-page'
         email.value = ''
         senha.value = ''

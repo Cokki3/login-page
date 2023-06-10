@@ -13,9 +13,16 @@
     /* border: 1px solid red; */
 }
 
+html {
+    scroll-behavior: unset;
+}
+
 body {
     overflow: hidden;
     background-image: linear-gradient(to bottom, green, aqua);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 i {
@@ -33,6 +40,9 @@ section {
     gap: .8em;
     padding: .5em;
     overflow: hidden;
+    user-select: none;
+    /* max-width: 770px; */
+
 }
 
 form {
@@ -137,6 +147,8 @@ h1 {
     color: white;
     font-size: 1.5em;
     height: fit-content;
+    cursor: pointer;
+
 }
 
 #menu {
@@ -186,4 +198,13 @@ h1 {
 #screen > h2 {
     text-align: center;
     color: white;
+}
+
+@media screen and (width:200) {
+    body {
+        background-color: red;
+    }
+    main {
+        background-color: red;
+    }
 }
