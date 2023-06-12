@@ -133,10 +133,34 @@ h1 {
     top: 1em;
 }
 
+#back2 {
+    position: relative;
+    left: -0.5em;
+    top: 0em;
+}
+
+#forgotPass-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#forgotPass-page > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* text-align: center; */
+}
+
 #home-page {
     display: flex;
     width: 100%;
     gap: 0;
+
+    position: relative;
+    z-index: 1;
 }
 
 #bars {
@@ -147,6 +171,7 @@ h1 {
     color: white;
     height: fit-content;
     cursor: pointer;
+    font-size: 1.3em;
 
 }
 
@@ -169,6 +194,8 @@ h1 {
     left: -1.8em;
     /* transition: all .3s; */
     background-color: #0000005e;
+    background-image: linear-gradient(to bottom, green, aqua);
+    box-shadow: 189px 17px 20px 31px #00000070;
     height: 150%;
     top: -1em;
 
