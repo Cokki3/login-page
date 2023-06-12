@@ -151,8 +151,12 @@ document.querySelector('#bars').addEventListener('click',() => {
 
 sendCode.addEventListener('click',(event) => {
     event.preventDefault()
-    if (validateEmail(forgotEmail.value) == false) {
-        // console.log('Formato de email inválido')
+    if (forgotEmail.value.length ==  0) {
+        alerta3.innerHTML = 'Informe um email!'
+        showFlash3('red')
+        setTimeout(hideFlash3, 1000)
+    }
+    else if (validateEmail(forgotEmail.value) == false) {
         alerta3.innerHTML = 'Formato de email inválido!'
         showFlash3('red')
         setTimeout(hideFlash3, 1000)
