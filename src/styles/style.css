@@ -232,11 +232,7 @@ h1 {
     color: white;
 }
 
-@media screen and (width:200) {
-    body {
-        background-color: red;
-    }
-    main {
-        background-color: red;
-    }
+
+#alerta, #alerta2, #alerta3 {
+    color: transparent;
 }
