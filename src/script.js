@@ -11,13 +11,18 @@ let registerPass = document.querySelector('#register-pass')
 let register = document.querySelector('#register')
 let alerta2 = document.querySelector('#alerta2')
 
+// Forgot Password
+let forgotEmail = document.querySelector('#forgot-email')
+let sendCode = document.querySelector('#sendCode') 
+let alerta3 = document.querySelector('#alerta3')
+
 // Paginas
 let loginPage = document.querySelector('#login-page')
 let registerPage = document.querySelector('#register-page')
 let homePage = document.querySelector('#home-page')
 
 
-// menu
+// Menu
 let menu = document.querySelector('#menu')
 
 let e;
@@ -39,6 +44,12 @@ const showFlash2 = (cor) => {
 }
 const hideFlash2 = () => {
     alerta2.style.color = 'transparent'
+}
+const showFlash3 = (cor) => {
+    alerta3.style.color = cor
+}
+const hideFlash3 = () => {
+    alerta3.style.color = 'transparent'
 }
 
 login.addEventListener('click', (event) => {
@@ -135,5 +146,24 @@ document.querySelector('#bars').addEventListener('click',() => {
     }
     else {
         menu.style.display = 'none'
+    }
+})
+
+sendCode.addEventListener('click',(event) => {
+    event.preventDefault()
+    if (validateEmail(forgotEmail.value) == false) {
+        // console.log('Formato de email inválido')
+        alerta3.innerHTML = 'Formato de email inválido!'
+        showFlash3('red')
+        setTimeout(hideFlash3, 1000)
+    }
+    else {
+        forgotEmail.value = ''
+        alerta3.innerHTML = 'Código enviado!'
+        showFlash3('blue')
+        setTimeout(hideFlash3, 2000)
+        setTimeout(() => { 
+            window.location.href = '#login-page' }, 1000
+        )
     }
 })
