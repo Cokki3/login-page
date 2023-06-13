@@ -10,6 +10,7 @@ let registerEmail = document.querySelector('#register-email')
 let registerPass = document.querySelector('#register-pass')
 let register = document.querySelector('#register')
 let alerta2 = document.querySelector('#alerta2')
+let userName = document.querySelector('#userName')
 
 // Forgot Password
 let forgotEmail = document.querySelector('#forgot-email')
@@ -89,9 +90,12 @@ login.addEventListener('click', (event) => {
 register.addEventListener('click', (event) => {
     event.preventDefault()
     n = registerName.value
+    userName.textContent = n
     lastN = registerLastname.value
     mail = registerEmail.value
     pass = registerPass.value
+
+    // Verificar se o email cadastrado é o mesmo utilizado para logar
 
     // Utilizar switch case
     if (n.length == 0 && lastN.length == 0 && mail.length == 0 && pass == 0) {
