@@ -10,7 +10,7 @@ let registerEmail = document.querySelector('#register-email')
 let registerPass = document.querySelector('#register-pass')
 let register = document.querySelector('#register')
 let alerta2 = document.querySelector('#alerta2')
-let userName = document.querySelector('#userName')
+let username = document.querySelector('#userName')
 
 // Forgot Password
 let forgotEmail = document.querySelector('#forgot-email')
@@ -53,49 +53,19 @@ const hideFlash3 = () => {
     alerta3.style.color = 'transparent'
 }
 
-login.addEventListener('click', (event) => {
-    event.preventDefault()
-    e = email.value
-    s = senha.value
+let regName;
+let regLastName;
+let regEmail;
+let regPass;
 
-    if (e.length == 0 && s.length == 0) {
-        alerta.innerHTML = 'Dados Incorretos!'
-        showFlash('red')
-        setTimeout(hideFlash, 1000);
-    }
-    else if (validateEmail(e) == false || e.length == 0) {
-        alerta.innerHTML = 'Email incorreto!'
-        showFlash('red')
-        setTimeout(hideFlash, 1000);
-        
-    }
-    else if (s.length == 0 || s.length < 8) {
-        alerta.innerHTML = 'Senha curta!'
-        showFlash('red')
-        setTimeout(hideFlash, 1000);
-    }
-    else {
-        // loginPage.style.display = 'none'
-        window.location.href = '#home-page'
-        email.value = ''
-        senha.value = ''
-        // console.log('LOGADO')
-        menu.style.display = 'none'
-        // window.moveTo('#home')
-
-    }
-
-})
-
+// REGISTER BUTTON
 register.addEventListener('click', (event) => {
     event.preventDefault()
     n = registerName.value
-    userName.textContent = n
+    // username.textContent = n
     lastN = registerLastname.value
     mail = registerEmail.value
     pass = registerPass.value
-
-    // Verificar se o email cadastrado é o mesmo utilizado para logar
 
     // Utilizar switch case
     if (n.length == 0 && lastN.length == 0 && mail.length == 0 && pass == 0) {
@@ -130,6 +100,10 @@ register.addEventListener('click', (event) => {
     }
     else {
         alerta2.innerHTML = 'Cadastrado com sucesso!'
+        regName = registerName.value
+        regLastName = registerLastname.value
+        regEmail = registerEmail.value
+        regPass = registerPass.value
         showFlash2('blue')
         setTimeout(hideFlash2, 2000)
         setTimeout(() => { 
@@ -139,11 +113,69 @@ register.addEventListener('click', (event) => {
             registerPass.value     = ''
             window.location.href = '#login-page' }, 1000
         )
-        
     }
 })
 
+// LOGIN BUTTON
+login.addEventListener('click', (event) => {
+    event.preventDefault()
+    e = email.value
+    s = senha.value
 
+    if (e.length == 0 && s.length == 0) {
+        alerta.innerHTML = 'Dados Incorretos!'
+        showFlash('red')
+        setTimeout(hideFlash, 1000);
+    }
+    else if (validateEmail(e) == false || e.length == 0) {
+        alerta.innerHTML = 'Email incorreto!'
+        showFlash('red')
+        setTimeout(hideFlash, 1000);
+        
+    }
+    
+    else if (s.length == 0 || s.length < 8) {
+        alerta.innerHTML = 'Senha curta!'
+        showFlash('red')
+        setTimeout(hideFlash, 1000);
+    }
+
+    else if (e != regEmail && s == regPass) {
+        alerta.innerHTML = 'Email incorreto!'
+        showFlash('red')
+        setTimeout(hideFlash, 1000);
+    }
+
+    else if (e == regEmail && s != regPass) {
+        alerta.innerHTML = 'Senha incorreta!'
+        showFlash('red')
+        setTimeout(hideFlash, 1000);
+    }
+
+    else {
+        // loginPage.style.display = 'none'
+        // console.log(email.value == registerEmail.value)
+        // console.log(senha.value == registerPass.value)
+
+        if (e == regEmail && s == regPass) {
+            username.textContent = regName
+        }
+        else {
+            username.textContent = ''
+        }
+        window.location.href = '#home-page'
+        email.value = ''
+        senha.value = ''
+
+        // console.log('LOGADO')
+        menu.style.display = 'none'
+        // window.moveTo('#home')
+
+    }
+
+})
+
+// MENU
 document.querySelector('#bars').addEventListener('click',() => {
     if (menu.style.display == 'none') {
         menu.style.display = 'flex'
